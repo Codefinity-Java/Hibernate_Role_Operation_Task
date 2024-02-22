@@ -5,18 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71984a68-3dfd-47a8-80f7-3afb21fa7a0c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/dao/DepartmentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/dao/EmployeeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/dao/RoleDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/dao/impl/DepartmentDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/dao/impl/EmployeeDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/dao/impl/RoleDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/model/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/service/DepartmentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/service/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/service/RoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/service/impl/DepartmentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/service/impl/RoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/codefinity/util/HibernateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2cgIszggXPmzwJcj41fwGT5Mpwk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,9 +59,82 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/daniillipenec/IdeaProjects/Hibernate_update_operation_task/src/main/java",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="codefinity.dao" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="codefinity.dao" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="codefinity.Main" />
+      <module name="Hibernate_update_operation_task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="codefinity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmployeeDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hibernate_update_operation_task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="codefinity.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="codefinity.dao" />
+      <option name="MAIN_CLASS_NAME" value="codefinity.dao.EmployeeDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoleDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Hibernate_update_operation_task" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="codefinity.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="codefinity.dao" />
+      <option name="MAIN_CLASS_NAME" value="codefinity.dao.RoleDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.EmployeeDaoTest" />
+        <item itemvalue="JUnit.RoleDaoTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -37,8 +143,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708527007480</updated>
-      <workItem from="1708527008878" duration="1000" />
+      <workItem from="1708527008878" duration="596000" />
+      <workItem from="1708603087045" duration="7002000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>

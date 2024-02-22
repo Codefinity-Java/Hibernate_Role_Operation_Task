@@ -3,8 +3,8 @@ package codefinity.model;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Cascade;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @NoArgsConstructor
@@ -22,7 +22,7 @@ public @Data class Employee {
     private double salary;
 
     @Column(name = "hire_date")
-    private Date hireDate;
+    private LocalDate hireDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "department_id")

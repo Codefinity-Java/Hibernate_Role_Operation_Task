@@ -4,20 +4,23 @@ import codefinity.dao.EmployeeDao;
 import codefinity.dao.impl.EmployeeDaoImpl;
 import codefinity.model.Department;
 import codefinity.model.Employee;
+import codefinity.model.Role;
 import codefinity.service.DepartmentService;
 import codefinity.service.EmployeeService;
+import codefinity.service.RoleService;
 
 import java.time.LocalDate;
-import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.List;
 import java.util.NoSuchElementException;
 
 public class EmployeeServiceImpl implements EmployeeService {
 
     private final EmployeeDao employeeDao = new EmployeeDaoImpl();
+
     private final DepartmentService departmentService = new DepartmentServiceImpl();
+
+    private final RoleService roleService = new RoleServiceImpl();
 
     @Override
     public Employee add(Employee employee) {
@@ -48,8 +51,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<Employee> getEmployeesHiredInASpecificTimeframe(String startDate, String endDate) {
-        Date from = dateParser(startDate);
-        Date to = dateParser(endDate);
+        LocalDate from = dateParser(startDate);
+        LocalDate to = dateParser(endDate);
         return employeeDao.getEmployeesHiredInASpecificTimeframe(from, to);
     }
 
@@ -88,9 +91,19 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
     }
 
-    private Date dateParser(String date) {
+    @Override
+    public Employee setRoleById(int employeeId, int roleId) {
+        return null;
+    }
+
+    @Override
+    public Employee setRoleById(int employeeId, Role role) {
+        return null;
+    }
+
+
+    private LocalDate dateParser(String date) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate localDate = LocalDate.parse(date, formatter);
-        return Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+        return LocalDate.parse(date, formatter);
     }
 }

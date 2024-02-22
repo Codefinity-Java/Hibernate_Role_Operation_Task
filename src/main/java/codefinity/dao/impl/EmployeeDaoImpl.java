@@ -4,7 +4,9 @@ import codefinity.dao.EmployeeDao;
 import codefinity.model.Department;
 import codefinity.model.Employee;
 import codefinity.service.DepartmentService;
+import codefinity.service.RoleService;
 import codefinity.service.impl.DepartmentServiceImpl;
+import codefinity.service.impl.RoleServiceImpl;
 import codefinity.util.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -12,12 +14,16 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class EmployeeDaoImpl implements EmployeeDao {
     private final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+
     private final DepartmentService departmentService = new DepartmentServiceImpl();
+
+    private final RoleService roleService = new RoleServiceImpl();
 
     @Override
     public Employee add(Employee employee) {
@@ -58,7 +64,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
     }
 
     @Override
-    public List<Employee> getEmployeesHiredInASpecificTimeframe(Date startDate, Date endDate) {
+    public List<Employee> getEmployeesHiredInASpecificTimeframe(LocalDate startDate, LocalDate endDate) {
         Session session = null;
         List<Employee> employees = null;
         try {
@@ -93,7 +99,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
             Query<Employee> query = session.createQuery(hql, Employee.class);
             employees = query.getResultList();
         } catch (Exception e) {
-            System.out.println("Can't get Employees from the DB" + e);
+            throw new NoSuchElementException("Can't get Employees from the DB", e);
         } finally {
             if (session != null) {
                 session.close();
@@ -130,6 +136,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
         Department department = null;
         Session session = null;
         Transaction transaction = null;
+
         try {
             session = sessionFactory.openSession();
             transaction = session.beginTransaction();
@@ -150,5 +157,10 @@ public class EmployeeDaoImpl implements EmployeeDao {
             }
         }
         return employee;
+    }
+
+    @Override
+    public Employee setRoleById(int employeeId, int roleId) {
+        return null;
     }
 }

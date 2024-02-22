@@ -2,6 +2,7 @@ package codefinity.service;
 
 import codefinity.model.Department;
 import codefinity.model.Employee;
+import codefinity.model.Role;
 
 import java.util.List;
 
@@ -23,4 +24,8 @@ public interface EmployeeService {
     Employee setDepartmentById(int employeeId, int departmentId);
 
     Employee setDepartmentById(int employeeId, Department department);
+
+    Employee setRoleById(int employeeId, int roleId);
+
+    Employee setRoleById(int employeeId, Role role);
 }
